@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', startGame)
 
 //Define your `board` object here!
-var board = {
-    cells: []
-}
+var board = {cells:[]}
 
 var scatterMines = function(board) {
     // This function take board object and randomly scatters mines into the board.
@@ -24,9 +22,9 @@ var scatterMines = function(board) {
 
 var generateBoard = function(cellNumber) {
     // boardSize is the number of cells across and down
-    // confirm that cellNumber variable is a number and is divisiable by 2    
+    // confirm that cellNumber variable is a number and is divisiable by 2
       if (!isNaN(cellNumber) && (cellNumber > 2)) {
-        alert("You entered a valid number")
+      //  alert("You entered a valid number")
         var boardSize = cellNumber
 
         var r = 0
@@ -132,3 +130,8 @@ function countSurroundingMines(cell) {
 var UserInput = prompt('How big would you like the board (choose a number between three and six)');
 
 generateBoard(UserInput);
+
+var resetGame = function(){
+    board = {cells:[]}
+    location.reload();   
+}
