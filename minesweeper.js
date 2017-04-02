@@ -24,8 +24,8 @@ var scatterMines = function(board) {
 
 var generateBoard = function(cellNumber) {
     // boardSize is the number of cells across and down
-    // confirm that cellNumber variable is a number and is divisiable by 2
-    if (!isNaN(cellNumber) && (cellNumber % 2 === 0) && (cellNumber > 4)) {
+    // confirm that cellNumber variable is a number and is divisiable by 2    
+      if (!isNaN(cellNumber) && (cellNumber > 2)) {
         alert("You entered a valid number")
         var boardSize = cellNumber
 
@@ -129,6 +129,6 @@ function countSurroundingMines(cell) {
 }
 
 
-var UserInput = prompt('How cell across would you like your board? (must be bigger than four)');
+var UserInput = prompt('How big would you like the board (choose a number between three and six)');
 
 generateBoard(UserInput);
